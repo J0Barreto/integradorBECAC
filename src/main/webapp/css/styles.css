@@ -1,0 +1,27 @@
+body, .index {
+    height: 100vh;
+    background: linear-gradient(#0d003b, #1a0272);
+    color: blanchedalmond;
+    text-align: center;
+    justify-content: center;
+}
+
+.presentacion {
+    padding-top: 50px;
+}
+
+.presentacion h1 {
+    text-decoration: underline;
+}
+
+.listado {
+    padding-top: 20px;
+}
+
+.formulario {
+    width: 50vw;
+}
+
+th, td {
+    color: white;
+}
