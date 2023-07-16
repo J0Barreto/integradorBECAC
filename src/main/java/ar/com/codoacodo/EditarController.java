@@ -41,7 +41,7 @@ public class EditarController extends HttpServlet {
         DAO dao = new MySQLDAOImpl();
         
         try {
-            Articulo articulo = dao.getById(Long.parseLong(id));
+            Articulo articuloExistente = dao.getById(Long.parseLong(id));
 
             String titulo = req.getParameter("nombre");
             double precio = Double.parseDouble(req.getParameter("precio"));
@@ -51,7 +51,7 @@ public class EditarController extends HttpServlet {
             LocalDateTime fechaCreacion = LocalDateTime.now();
 
             Articulo articuloActualizado = new Libro(titulo, codigo, autor, precio, false, isbn, codigo, fechaCreacion);
-            articuloActualizado.setId(articulo.getId());
+            articuloActualizado.setId(articuloExistente.getId());
 
             dao.update(articuloActualizado);
 
